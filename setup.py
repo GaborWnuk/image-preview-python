@@ -48,6 +48,7 @@ setup(
     author='Gabor Wnuk',
     author_email='gabor.wnuk@me.com',
     url='https://github.com/GaborWnuk/image-preview-python',
+    download_url='https://github.com/GaborWnuk/image-preview-python/tarball/%s' % find_version("imagepreview", "__init__.py"),
     packages=[
         'imagepreview'
         ],
