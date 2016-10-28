@@ -33,7 +33,7 @@ class ImagePreviewTest(unittest.TestCase):
             ip = ImagePreview(file_path_or_bytes="Nonexistent file")
 
     def test_image_bytes_not_image(self):
-        with self.assertRaises(OSError):
+        with self.assertRaises(IOError):
             file_bytes = open("%s/assets/bytes.bin" % path, "rb")
             ip = ImagePreview(file_path_or_bytes=file_bytes)
 
