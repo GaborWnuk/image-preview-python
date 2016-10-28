@@ -11,7 +11,7 @@ The main reason to do such thing is to show your user approximate look of your d
 
 This library is sort of a helper to achieve above.
 
-Because every thumbnail is compressed as JPEG, with the same size (default: 42x42 pixels) and using the same Huffmann table, each JPEG file consist of a common header (620 bytes) and a small picture data part (around 200 bytes, depending on quality you use).
+Because every thumbnail is compressed as JPEG, with the same size (default: 42x42 pixels) and using the same Huffman table, each JPEG file consist of a common header (620 bytes) and a small picture data part (around 200 bytes, depending on quality you use).
 
 Having this in mind we choose to omit headers and send only 200 bytes (base64) and then prepend this data with a header on client side.
 
