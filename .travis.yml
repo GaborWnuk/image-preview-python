@@ -1,8 +1,15 @@
 language: python
 python:
-    - 2.7
-    - 3.4
-    - 3.5
-
+- 2.7
+- 3.4
+- 3.5
 install: python setup.py install
 script: py.test -vv
+deploy:
+  provider: pypi
+  user: gaborwnuk
+  password:
+    secure: nzbzLSESQQFLfAOhbW4nVSy0Ovtg167zuIgvCWlSfQ69zkpMxWUBFIhZ7oJ3v/ep5BKQYDJCVz44ZWgJoz5TU0nWaMRCIJLqUIQeHiD2mXTCZ1RnL2VVqnvI3tnfLiv2EIbc9GpWl4bDVhc1Y85SR+JF9MKwaLvsFzxFWAMcg+TfYdIKwNL+giMJBQf6lg3B3NV2VWb9Qdf8dEHfgkWfPclsGJP7YI3aOZXV0gUyaNXX2PUJCAi64cQK1BVVKVD1SrRBxtC7V5OLMMOIblWw/b5LBCbA9IjSgspsXWOdH7VaGGRaa1aZxtTJewsjp6o1hb4p1syTMiNUxFUcTlHhltUxl/u7n1GRo/ZE0hY1ue451vZ/9EBoJQi3Dzkz3u4ckfUZuKNloQqw7o5FvrvLx3px6d5yVEF1BS/rKQvA8smgGJMSQEwZGhJ1g6llZckosV/gzWEaiiqih8lxDK2xlaET5j+EJaW+RGR8WYrIvklLb0tHWPqxxsO21uLeoYkzaYGVF8HQhZUYhAiI1XVG93M9d4Ge4RLTIlR5xcQusKNRe7hDF+zC7wo86x8inS7oWM7t9JS5R6pF0hlM35Px63/280+aPu/Rl0BeM+KFTQpRO4YphUhDUvqBoF2gHE8ervuS180V2HrgGAKtTljgV0MOpEQRdaB6D+o9C9uKfcE=
+  on:
+    tags: true
+    branch: master
