@@ -47,7 +47,7 @@ setup(
         ],
     author='Gabor Wnuk',
     author_email='gabor.wnuk@me.com',
-    url='',
+    url='https://github.com/GaborWnuk/image-preview-python',
     packages=[
         'imagepreview'
         ],
