@@ -1,5 +1,6 @@
 imagepreview
 ============
+[![Build Status](https://travis-ci.org/GaborWnuk/image-preview-python.svg?branch=master)](https://travis-ci.org/GaborWnuk/image-preview-python)
 
 Simple helper module for Image Preview method for REST and GraphQL for immediate image preview on your client's side (Swift, Java, JavaScript and so on).
 
