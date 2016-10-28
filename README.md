@@ -4,7 +4,7 @@ imagepreview
 
 Simple helper module for Image Preview method for REST and GraphQL for immediate image preview on your client's side (Swift, Java, JavaScript and so on).
 
-Idea is to deliver only around 200 bytes of image data as a normal base64 data in one of JSON fields of your entities and then issue request to obtain full resolution of an image.
+Idea is to deliver only around 200 bytes of image as a normal base64 data in one of JSON fields of your entities and then issue request to obtain full resolution of an image.
 
 ## Short "how does it work"
 The main reason to do such thing is to show your user approximate look of your data stream as soon as possible. This method gives you the ability to serve image previews in the sam milisecond you show your text content in your app, as image preview is delivered as one of data fields in your JSON response.
