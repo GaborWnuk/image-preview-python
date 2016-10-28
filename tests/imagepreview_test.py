@@ -29,7 +29,7 @@ class ImagePreviewTest(unittest.TestCase):
             ip = ImagePreview(file_path_or_bytes=0)
 
     def test_image_file_not_found(self):
-        with self.assertRaises(FileNotFoundError):
+        with self.assertRaises(IOError):
             ip = ImagePreview(file_path_or_bytes="Nonexistent file")
 
     def test_image_bytes_not_image(self):
