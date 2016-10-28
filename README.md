@@ -7,7 +7,23 @@ Simple helper module for Image Preview method for REST and GraphQL for immediate
 Idea is to deliver only around 200 bytes of image as a normal base64 data in one of JSON fields of your entities and then issue request to obtain full resolution of an image.
 
 ## Short "how does it work"
-The main reason to do such thing is to show your user approximate look of your data stream as soon as possible. This method gives you the ability to serve image previews in the sam milisecond you show your text content in your app, as image preview is delivered as one of data fields in your JSON response.
+The main reason to do such thing is to show your user approximate look of your data stream as soon as possible. This method gives you the ability to serve image previews in the sam milisecond you show your text content in your app, as image preview is delivered as one of data fields in your JSON response, i.e:
+
+```json
+{
+  "data": {
+    "articles": [
+      {
+        "title": "Piotr Cyrwus zostanie fanatykiem wędkarstwa",
+        "img": {
+          "url": "https://i.wpimg.pl/1000-666/CSM//d.wpimg.pl/1636256103--1868262584_piotr-cyrwus.jpg",
+          "b64": "AD8AqOc54pAMDNKTyRnrTkUS/JnBxUAOVSR8qE5pGVwcOu09qvD5AAo+XFVrkk7TjHNMdiLoB7UmT7UpHzU3A9TSEIynOaWLJlGDzmn3DL5zKigAHGR3otQGlxj+E00gLJb5euDUDtukxg8CrJTdVO6Y/aDjjaAOKdhsUZLDilbBY49aiSXYRkZFWMbud3XnrUtWEVCSWJPU81Zsf+Pg/wC7VX+KrVl/x8fhWiEaGBnNY8jb5Gb1Oa1pP9S/+6aypgBKwAwKGAw1cjdfLXI7DvVKlyfWpauM/9k="
+        }
+      }
+    ]
+  }
+}
+```
 
 This library is sort of a helper to achieve above.
 
