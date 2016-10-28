@@ -27,6 +27,18 @@ image_header = ip.thumbnail_header_bytes()
 image_body = ip.thumbnail_body_b64()
 ```
 
+Or fetch from remote location:
+```python
+import requests
+
+url = "https://upload.wikimedia.org/wikipedia/commons/4/44/Mt_Cook,_NZ.jpg"
+response = requests.get(url)
+ip = ImagePreview(file_path_or_bytes=BytesIO(response.content))
+
+# this is what you send in your API to your client
+image_body = ip.thumbnail_body_b64()
+```
+
 You can find basic Swift / iOS example here: [https://github.com/GaborWnuk/image-preview-ios-demo](https://github.com/GaborWnuk/image-preview-ios-demo).
 
 ## How to use
