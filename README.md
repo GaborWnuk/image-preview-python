@@ -15,12 +15,20 @@ Because every thumbnail is compressed as JPEG, with the same size (default: 42x4
 
 Having this in mind we choose to omit headers and send only 200 bytes (base64) and then prepend this data with a header on client side.
 
+```python
+file_bytes = open("matheson.jpg", "rb")
+
+ip = ImagePreview(file_path_or_bytes=file_bytes)
+image_header = ip.thumbnail_header_bytes() # this is what you should have on your client side and prepend image_body with it
+image_body = ip.thumbnail_body_b64() # this is what you send in your API to your client
+```
+
 You can find basic Swift / iOS example here: [https://github.com/GaborWnuk/image-preview-ios-demo](https://github.com/GaborWnuk/image-preview-ios-demo).
 
 ## How to use
 To install the package simply use PyPi
 ```
-pip install imagepreview
+$ pip install imagepreview
 ```
 
 ## License
