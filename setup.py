@@ -58,6 +58,6 @@ setup(
         'pyflakes>=0.8.1',
         'virtualenv>=1.11.6',
         'pep8>=1.5.7',
-        'Pillow==3.4.2'
+        'Pillow==9.3.0'
         ]
 )
